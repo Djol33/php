@@ -1,12 +1,11 @@
 <?php
 
 namespace App\Controller;
-use App\View\AboutUsView;
 
-class AboutUs extends  Controller
+class AboutUs extends AbstractController
 {
-    public static function Page()
+    public static function page(): void
     {
-        AboutUsView::createView();
+        static::view('/about-us.php');
     }
 }

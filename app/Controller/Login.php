@@ -2,34 +2,28 @@
 
 namespace App\Controller;
 
-use App\View\LoginView;
 use App\Model\ModelLogin;
-class Login extends Controller
+
+class Login extends AbstractController
 {
-    public static function Page(): void
+    public static function page(): void
     {
-        if(isset($_SESSION["id"])) {
+        if (isset($_SESSION["id"])) {
             header("Location: about-us");
             exit();
+        } else {
+            static::view('/login.php');
 
-        }
-        else{
-            LoginView::createView();
             if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $model = new ModelLogin();
                 $check = $model->login($_POST["email"], $_POST["password"]);
-                if($check == 1) {
+                if ($check == 1) {
                     header("Location: about-us");
                     exit();
-                }
-                else{
+                } else {
                     echo "Error, Try again";
                 }
-
             }
         }
-
-
-
     }
 }

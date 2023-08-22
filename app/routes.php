@@ -11,22 +11,21 @@ session_start();
 
 ob_start();
 
-HeaderView::createView();
-
 Route::set("/", function () {
-    Home::Page();
+    Home::page();
 });
+
 Route::set("/about-us", function () {
-    AboutUs::Page();
+    AboutUs::page();
 });
 
 Route::set("/register", function () {
-    Register::Page();
+    Register::page();
 });
 
 Route::set("/login", function () {
     if (!isset($_SESSION["name"]) && !isset($_SESSION["id"])) {
-        Login::Page();
+        Login::page();
     } else {
         header("Location: about-us");
         exit();

@@ -1,11 +1,10 @@
 <?php
 namespace  App\Controller;
-use App\View\HomeView;
 
-class Home extends  Controller{
-
-    public static function Page(): void
+class Home extends AbstractController
+{
+    public static function page(): void
     {
-        HomeView::createView();
+        static::view('/home.php');
     }
 }
