@@ -6,7 +6,6 @@ class RegisterView extends View
 {
     public static function createView()
     {
-        require_once __DIR__."/public/Register.html";
+        require views_path('/Register.html');
     }
-
 }

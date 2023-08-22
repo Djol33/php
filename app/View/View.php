@@ -4,8 +4,8 @@ namespace App\View;
 
 class View
 {
-    public static function createView(){
+    public static function createView()
+    {
         echo "helo";
     }
-
 }
