@@ -2,6 +2,7 @@
     "name": "app/app",
     "autoload": {
         "psr-4": {
+            "Core\\": "src/",
             "App\\": "app/"
         },
         "files": ["app/helpers.php"]

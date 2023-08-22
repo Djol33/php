@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Model\ModelLogin;
+use Core\AbstractController;
 
 class Login extends AbstractController
 {

@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Model\ModelRegister;
+use Core\AbstractController;
 
 class Register extends AbstractController
 {

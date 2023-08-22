@@ -1,5 +1,8 @@
 <?php
-namespace  App\Controller;
+
+namespace App\Controller;
+
+use Core\AbstractController;
 
 class Home extends AbstractController
 {

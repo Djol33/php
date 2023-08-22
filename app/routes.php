@@ -1,11 +1,10 @@
 <?php
 
-use App\Route\Route;
 use App\Controller\Home;
 use App\Controller\AboutUs;
 use App\Controller\Register;
 use App\Controller\Login;
-use App\View\HeaderView;
+use Core\Routing\Route;
 
 session_start();
 
