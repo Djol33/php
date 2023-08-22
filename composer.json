@@ -1,17 +1,13 @@
 {
-  "name": "app/app",
-
-
-  "autoload": {
-    "psr-4": {
-      "App\\Route\\": "Route/",
-      "App\\Model\\": "model/",
-      "App\\Controller\\": "controler/",
-      "App\\View\\": "view/"
-
+    "name": "app/app",
+    "autoload": {
+        "psr-4": {
+            "Core\\": "src/",
+            "App\\": "app/"
+        },
+        "files": ["app/helpers.php"]
+    },
+    "require": {
+        "ext-mysqli": "*"
     }
-  },
-  "require": {
-    "ext-mysqli": "*"
-  }
 }
