@@ -1,6 +1,5 @@
 <?php
 session_start();
-include "view/css/style.css";
 ob_start();
 
 require 'vendor/autoload.php';
@@ -10,6 +9,11 @@ use App\Controller\AboutUs;
 use App\Controller\Register;
 use App\Controller\Login;
 use \App\View\HeaderView;
+use App\Controller\LogOut;
+use App\Controller\MakePost;
+use App\Controller\ShowPosts;
+use App\Controller\OpenPost;
+
 
 HeaderView::createView();
 
@@ -21,7 +25,15 @@ Route::set("about-us", function() {
 });
 
 Route::set("register", function() {
-    Register::Page();
+    if(!isset($_SESSION["name"]) && !isset($_SESSION["id"])){
+        Register::Page();
+
+
+    }else {
+        header("Location: about-us");
+
+        exit();
+    }
 });
 Route::set("login", function() {
 
@@ -36,7 +48,22 @@ Route::set("login", function() {
     }
 
 });
-IF(isset($_SESSION["name"])) {
-    echo $_SESSION["name"];
-}
+
+
+Route::set("logout", function() {
+    LogOut::LogOut();
+    header("Location: login");
+});
+
+Route::set("makepost", function() {
+    MakePost::Page();
+});
+Route::set("all-posts", function() {
+    ShowPosts::Page();
+});
+
+Route::set("post", function() {
+OpenPost::Page();
+});
+
 ob_end_flush();

@@ -2,11 +2,10 @@
 
 namespace App\View;
 
-class RegisterView extends View
+class CreatePostView extends View
 {
     public static function createView()
     {
-        require_once __DIR__."/public/Register.php";
+        require_once __DIR__."/public/createpost.php";
     }
-
 }

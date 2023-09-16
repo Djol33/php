@@ -12,5 +12,11 @@ CREATE TABLE korisnici (
                            password VARCHAR(400)
 );
 
+CREATE TABLE posts (
+                       id INT AUTO_INCREMENT PRIMARY KEY,
+                       fk_id INT NOT NULL,
+                       title VARCHAR(50),
+                       text VARCHAR(500)
+);
 -- Insert some initial data
 INSERT INTO korisnici (name,email,password) VALUES ("nemanja", "nemanjaaaa", "12345678");

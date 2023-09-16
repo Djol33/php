@@ -1,0 +1,47 @@
+
+*{
+    margin:0px;
+    padding: 0px;
+
+}
+
+header{
+    height:50px;
+    background-color: green;
+
+
+}
+a{
+    color:black;
+}
+header#header a{
+    color:white;
+    text-decoration: none;
+}
+a{
+    color:black !important;
+}
+header ul{
+    width:30%;
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+    height:50px;
+    align-items:center;
+}
+header nav{
+    display: flex;
+    justify-content: space-between;
+}
+header ul li{
+    width:fit-content;
+    height: fit-content;
+    display:flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+header ul li a{
+    display:block;
+    width:fit-content;
+
+}

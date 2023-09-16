@@ -5,4 +5,4 @@ require_once "Route/Routes.php";
 require 'vendor/autoload.php';
 
 
-
+echo __DIR__; 
